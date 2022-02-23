@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+body {
+    font-size: 100%;
+    width: 100%;
+    background-color:#dbe9e9 ;
+    color: #1f2b3f;
+    margin: 0 auto;
+
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    top: 0;
+    width:100%;
+    min-height: 8vh;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.445);
+}
+
+.menu-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-bar img {
+    margin: 10;
+    width: 70;
+    height: 55;
+}
+
+.menu {
+    display:none;
+}
+
+
+.first-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-heading img {
+    display: flex;    
+    width:25%;
+    height: 25%;
+    border-radius: 50%;
+}
+
+.dark-box {
+    background-color: #1f2b3f;
+    color: #dbe9e9;
+}
+
+.card {
+    border-radius: 1em;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.445);
+}
+.section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1em;
+    box-sizing: border-box;
+    padding: 1.7em;
+    margin: 2em 1em;
+}
+
+
+.section-container em {
+    font-size: 1.1em;
+}
+
+.section-title {
+    font-size: 4em;
+    padding-bottom: 0.35em;
+    letter-spacing: -0.05em;
+}
+
+.contact { 
+    box-sizing: border-box;
+    padding: 3em;
+    font-size: 1em;
+}
+
+.form-row {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form-row input[type="text"], 
+.form-row input[type="email"] {
+    background-color: #dbe9e9;
+    border-radius: 0.3em;
+    border: 1px solid #101724;
+    padding: 0.3em;
+    font-size: 1em;
+}
+
+.form-row label {
+    margin-bottom: 0.5em;
+}
+
+.form-row textarea {
+    font-size: 0.8em;
+    resize: none;
+    background-color: #dbe9e9;
+    border-radius: 0.3em;
+    border: 1px solid #101724;
+    min-height: 12em;
+    margin-bottom: 0.5em;
+    padding: 0.3em;
+}
+
+.form-row button {
+    cursor: pointer;
+    border-radius: 0.5em;
+    padding: 1em 0.5em;
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color: #6287c7;
+    color: #dbe9e9;
+    border: 1px solid #101724;
+    width: 50%;
+}
+
+.form-row button:hover {
+    background-color: #62c4c7;
+
+}
+
+.form-row button:active {
+    background-color: #c79362;
+}
+    
+
+footer {
+    display: flex;
+    padding: 2em;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.social-buttons {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-around;
+    padding: 1em 0;
+
+}
+
+.copyright {
+    width:100%;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.about-me-photo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-me-photo img {
+    max-width: 20em;
+    margin-right: 2em;
+  
+}
+
+.over {
+    position: relative;
+
+}
+
+.photobg {
+    z-index: -1;
+}
+
+.photobg::before {
+    content: "";
+    background-image: url('images/chris1.png');
+    background-size:cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 47vw;
+    opacity: 30%;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.skills-box {
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    margin: 1em auto;
+}
+
+.skills-box h2 {
+    display: block;
+    text-align:center;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+.skills-chart {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 800px) {
+
+.page {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.section-container {
+    margin-top: 2em;
+}
+
+.form-row button {
+    width: 33%;
+}
+
+.skills-container {
+    flex-direction: row;
+
+}
+
+.photobg::before {
+    position: absolute;
+    left: 450px;
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    padding-top: 4vh;
+}
+
+.menu-link {
+    font-size: 1em;
+    padding: 0 1em;
+}
+
+.menu-link a {
+    color:#dbe9e9;
+    text-decoration: none;
+}
+
+.menu-link a:hover {
+    color:#62c4c7;
+}
+
+.social-buttons {
+    width: 50%;
+    margin: 0 auto;
+
+}
