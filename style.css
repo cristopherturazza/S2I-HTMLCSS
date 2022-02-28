@@ -45,12 +45,11 @@ body {
 }
 
 .logo {
-    transform: rotate(45deg);
     transition: 500ms ease-in-out;
 }
 
 img.logo:hover {
-    transform: rotate(90deg);
+    transform: rotate(45deg);
 }
 
 .first-heading {
