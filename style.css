@@ -5,39 +5,42 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /**smooth scrolling**/
   }
 
 body {
-    font-size: 100%;
+    font-size: 1em;
     width: 100%;
     background-color:#dbe9e9 ;
     color: #1f2b3f;
     margin: 0 auto;
-
 }
 
-.header {
+.header { /** top fixed navbar **/
     position: fixed;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     top: 0;
     width:100%;
-    min-height: 8vh;
+    min-height: 10vh;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.445);
 }
+
 
 .menu-bar {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    margin: 0 1em;
     justify-content: space-between;
 }
 
 .menu-bar img {
-    margin: 10;
-    width: 70;
-    height: 55;
+    margin: 0.5rem;
+    width: 60;
+    height: 60;
 }
 
 .menu {
@@ -57,20 +60,14 @@ img.logo:hover {
     justify-content: space-between;
 }
 
-.first-heading img {
-    display: flex;    
-    width:25%;
-    height: 25%;
-    border-radius: 50%;
-}
-
 .dark-box {
     background-color: #1f2b3f;
+    background: linear-gradient(to right,#1f2b3f,#2a3a55);
     color: #dbe9e9;
 }
 
 .card {
-    border-radius: 1em;
+    border-radius: 1rem;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.445);
 }
 
@@ -78,32 +75,25 @@ img.logo:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 1em;
     box-sizing: border-box;
-    padding: 1.7em;
-    margin: 2em 1em;
-}
-
-
-.section-container em {
-    font-size: 1.1em;
+    padding: 1.7rem;
+    margin: 2rem 1rem;
 }
 
 .section-title {
     font-family: 'Inter', sans-serif;
-    font-size: 4em;
-    padding-bottom: 0.35em;
-    letter-spacing: -0.05em;
+    font-size: 4rem;
+    padding-bottom: 0.35rem;
+    letter-spacing: -0.3rem;
 }
 
-.contact { 
+.contact {
     box-sizing: border-box;
-    padding: 3em;
-    font-size: 1em;
+    padding: 2rem;
 }
 
 .form-row {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -113,39 +103,38 @@ img.logo:hover {
 .form-row input[type="text"], 
 .form-row input[type="email"] {
     background-color: #dbe9e9;
-    border-radius: 0.3em;
+    border-radius: 0.3rem;
     border: 1px solid #101724;
-    padding: 0.3em;
-    font-size: 1em;
+    padding: 0.3rem;
 }
 
 .form-row label {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
     font-weight: bold;
 }
 
 .form-row textarea {
-    font-size: 0.8em;
+    font-size: 0.8rem;
     resize: none;
     background-color: #dbe9e9;
-    border-radius: 0.3em;
+    border-radius: 0.3rem;
     border: 1px solid #101724;
-    min-height: 12em;
-    margin-bottom: 0.5em;
-    padding: 0.3em;
+    min-height: 12rem;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem;
 }
 
 .form-row button {
     cursor: pointer;
-    border-radius: 0.5em;
-    padding: 1em 0.5em;
-    font-size: 0.9em;
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem;
     font-weight: bold;
     background-color: #6287c7;
     color: #dbe9e9;
     border: 1px solid #101724;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.192);
     width: 50%;
+    transition: 200ms ease-in;
 }
 
 .form-row button:hover {
@@ -163,7 +152,7 @@ img.logo:hover {
 
 footer {
     display: flex;
-    padding: 2em;
+    padding: 2rem;
     justify-content: center;
     flex-direction: column;
 }
@@ -172,14 +161,13 @@ footer {
     display: flex;
     box-sizing: border-box;
     justify-content: space-around;
-    padding: 1em 0;
-
+    padding: 1rem 0;
 }
 
 .copyright {
     width:100%;
     text-align: center;
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 
 .about-me-photo {
@@ -188,14 +176,13 @@ footer {
 }
 
 .about-me-photo img {
-    max-width: 20em;
-    margin-right: 2em;
-  
+    max-width: 20rem;
+    margin-right: 2rem;
 }
 
+/** === putting bg under Bio text === **/
 .over {
     position: relative;
-
 }
 
 .photobg {
@@ -213,6 +200,7 @@ footer {
     left: 50%;
     opacity: 30%;
 }
+/** === putting bg under Bio text === END **/
 
 .skills-container {
     display: flex;
@@ -224,62 +212,169 @@ footer {
     display: flex;
     width:100%;
     flex-direction: column;
-    margin: 1em auto;
+    margin: 1rem auto;
 }
 
 .skills-box h2 {
     display: block;
     text-align:center;
-    font-size: 1.5em;
-    margin-top: 0.5em;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
 }
 
 .skills-chart {
-    font-size: 0.8em;
+    font-size: 0.8rem;
     display: flex;
     justify-content: center;
 }
+
+/** Mobile Menu Styling **/
+
+#menu-mobile-toggle {
+    display: none;
+}
+
+.menu-mobile {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;    
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 10vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu-mobile > li {
+    margin: 0 2rem;
+  }
+  
+  .menu-mobile-button-container {
+    display: flex;
+    margin: 1em;
+    width: 2rem;
+    cursor: pointer;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .menu-mobile-button,
+  .menu-mobile-button::before,
+  .menu-mobile-button::after {
+    display: block;
+    background-color: #dbe9e9;
+    position: absolute;
+    height: 0.2rem;
+    width: 2rem;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  
+  .menu-mobile-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-mobile-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-mobile-toggle:checked + .menu-mobile-button-container .menu-mobile-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-mobile-toggle:checked + .menu-mobile-button-container .menu-mobile-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-mobile-toggle:checked + .menu-mobile-button-container .menu-mobile-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+
+  #menu-mobile-toggle ~ .menu-mobile li {
+    font-size: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #menu-mobile-toggle:checked ~ .menu-mobile li {
+    font-size: 1rem;
+    font-weight: bold;
+    //border-top: 1px solid #676e6e;
+    height: 3em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .menu-mobile > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: #dbe9e9;
+    background-color: #1f2b3f;
+    background: linear-gradient(to right,#1f2b3f,#2a3a55);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.856);
+  }
+
+ 
+
+
 
 /** Desktop media query **/
 
 @media only screen and (min-width: 800px) {
 
-.page {
-    width: 800px;
-    margin: 0 auto;
-}
-
+.menu-bar, .section-container, .contact, .about-me-photo {
+        width: 60vw;
+        margin: 0 auto;
+      }
+    
 .section-container {
-    margin-top: 2em;
-}
+          margin-top: 2em;
+      }
+    
+.contact {
+        padding: 1.7rem;
+      }
 
 .form-row button {
-    width: 33%;
+    width: 15vw;
 }
 
 .skills-container {
     flex-direction: row;
-
 }
 
 .photobg::before {
     position: absolute;
     left: 50%;
-
 }
 
 .menu {
     display: flex;
     flex-direction: row;
     justify-content:flex-end;
-    padding-top: 4vh;
+    padding-top: 2.5rem;
 }
 
 .menu-link {
-    font-size: 1em;
-    padding: 0 1em;
+    font-size: 1rem;
+    padding: 0 1rem;
     transition: 500ms ease-in-out;
-    
 }
 
 .menu-link:hover {
@@ -291,7 +386,8 @@ footer {
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    
+    transition: 500ms ease-in-out;
+    white-space: nowrap;
 }
 
 .menu-link a:hover {
@@ -303,8 +399,23 @@ footer {
     margin: 0 auto;
 }
 
+/** offset for menu anchors **/
 .offset {
     position: relative;
     top: -120px;
 }
-/** offset for menu anchors **/
+
+/** Mobile Menu **/
+  
+  .menu-mobile-button-container {
+    display: none;
+  }
+  
+  #menu-mobile-toggle {
+    display: none;
+  }
+
+  .menu-mobile {
+      display:none;
+  }
+
