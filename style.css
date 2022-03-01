@@ -89,7 +89,7 @@ img.logo:hover {
 
 .contact {
     box-sizing: border-box;
-    padding: 2rem;
+    padding: 2.3rem;
 }
 
 .form-row {
@@ -192,12 +192,12 @@ footer {
 .photobg::before {
     content: "";
     background-image: url('images/chris1.png');
-    background-size:cover;
+    background-size: cover;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 50%;
+    left: 50vw;
     opacity: 30%;
 }
 /** === putting bg under Bio text === END **/
@@ -395,7 +395,7 @@ footer {
 }
 
 .social-buttons {
-    width: 50%;
+    width: 30%;
     margin: 0 auto;
 }
 
