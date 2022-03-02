@@ -34,7 +34,7 @@ body {
 /** offset for menu anchors **/
 .offset {
     position: relative;
-    top: -12rem;
+    top: -10rem;
     background-color: red;
 }
 
