@@ -1,11 +1,13 @@
+
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    
   }
 
   html {
-    scroll-behavior: smooth; /**smooth scrolling**/
+    scroll-behavior: smooth; /** smooth scrolling **/
   }
 
 body {
@@ -14,6 +16,7 @@ body {
     background-color:#dbe9e9 ;
     color: #1f2b3f;
     margin: 0 auto;
+    font-family: 'Inter', sans-serif;
 }
 
 .header { /** top fixed navbar **/
@@ -24,10 +27,16 @@ body {
     flex-wrap: wrap;
     top: 0;
     width:100%;
-    min-height: 10vh;
+    min-height: 5rem;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.445);
 }
 
+/** offset for menu anchors **/
+.offset {
+    position: relative;
+    top: -12rem;
+    background-color: red;
+}
 
 .menu-bar {
     display: flex;
@@ -197,7 +206,7 @@ footer {
     top: 0;
     right: 0;
     bottom: 0;
-    left: 50vw;
+    left: 40%;
     opacity: 30%;
 }
 /** === putting bg under Bio text === END **/
@@ -244,17 +253,22 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 10vh;
+    margin-top: 5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
+  .menu-mobile a {
+    text-decoration: none;
+    color:#dbe9e9;
+  }
   
-  .menu-mobile > li {
+.menu-mobile > li {
     margin: 0 2rem;
   }
   
-  .menu-mobile-button-container {
+.menu-mobile-button-container {
     display: flex;
     margin: 1em;
     width: 2rem;
@@ -263,9 +277,9 @@ footer {
     align-items: center;
   }
   
-  .menu-mobile-button,
-  .menu-mobile-button::before,
-  .menu-mobile-button::after {
+.menu-mobile-button,
+.menu-mobile-button::before,
+.menu-mobile-button::after {
     display: block;
     background-color: #dbe9e9;
     position: absolute;
@@ -275,31 +289,31 @@ footer {
     border-radius: 2px;
   }
   
-  .menu-mobile-button::before {
+.menu-mobile-button::before {
     content: '';
     margin-top: -8px;
   }
   
-  .menu-mobile-button::after {
+.menu-mobile-button::after {
     content: '';
     margin-top: 8px;
   }
   
-  #menu-mobile-toggle:checked + .menu-mobile-button-container .menu-mobile-button::before {
+#menu-mobile-toggle:checked + .menu-mobile-button-container .menu-mobile-button::before {
     margin-top: 0px;
     transform: rotate(405deg);
   }
   
-  #menu-mobile-toggle:checked + .menu-mobile-button-container .menu-mobile-button {
+#menu-mobile-toggle:checked + .menu-mobile-button-container .menu-mobile-button {
     background: rgba(255, 255, 255, 0);
   }
   
-  #menu-mobile-toggle:checked + .menu-mobile-button-container .menu-mobile-button::after {
+#menu-mobile-toggle:checked + .menu-mobile-button-container .menu-mobile-button::after {
     margin-top: 0px;
     transform: rotate(-405deg);
   }
 
-  #menu-mobile-toggle ~ .menu-mobile li {
+#menu-mobile-toggle ~ .menu-mobile li {
     font-size: 0;
     height: 0;
     margin: 0;
@@ -308,16 +322,15 @@ footer {
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  #menu-mobile-toggle:checked ~ .menu-mobile li {
+#menu-mobile-toggle:checked ~ .menu-mobile li {
     font-size: 1rem;
     font-weight: bold;
-    //border-top: 1px solid #676e6e;
     height: 3em;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  .menu-mobile > li {
+.menu-mobile > li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -329,8 +342,6 @@ footer {
     background: linear-gradient(to right,#1f2b3f,#2a3a55);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.856);
   }
-
- 
 
 
 
@@ -360,8 +371,7 @@ footer {
 }
 
 .photobg::before {
-    position: absolute;
-    left: 50%;
+    left: 70%
 }
 
 .menu {
@@ -399,11 +409,6 @@ footer {
     margin: 0 auto;
 }
 
-/** offset for menu anchors **/
-.offset {
-    position: relative;
-    top: -120px;
-}
 
 /** Mobile Menu **/
   

@@ -1,6 +1,6 @@
 <!DOCTYPE html lang="en">
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,7 @@
         <div class="menu-bar">
             <a href="/index.html"><img class="logo" src="images/clogo.png" alt="MyLogo"></a>
         <div class="menu">
-            <div class="menu-link"><a href="#BIO"> Bio </a></div>
+            <div class="menu-link"><a href="#BIO" > Bio </a></div>
             <div class="menu-link"><a href="#SKILLS"> Skills </a></div>
             <div class="menu-link"><a href="#PORTFOLIO"> Portfolio </a></div>
             <div class="menu-link"><a href="#ABOUTME"> About Me </a></div>
@@ -33,17 +33,17 @@
     <div class='menu-mobile-button'></div>
   </label>
     <ul class="menu-mobile">
-      <li>Bio</li>
-      <li>Skills</li>
-      <li>Portfolio</li>
-      <li>About Me</li>
-      <li>Contact Me</li>
+      <li><a href="#BIO" onclick='hideMenu()'> Bio </a></li>
+      <li><a href="#SKILLS" onclick='hideMenu()'> Skills </a></li>
+      <li><a href="#PORTFOLIO" onclick='hideMenu()'> Portfolio </a></li>
+      <li><a href="#ABOUTME" onclick='hideMenu()'> About Me </a></li>
+      <li><a href="#CONTACTME" onclick='hideMenu()'> Contact Me </a></li>
     </ul>    
         </div>
     </div>
 </header>
-<main style="margin-top: 20vh;"> <!-- Inline style to avoid fixed navbar covering" -->
-    <div class="section-container card dark-box photobg over">
+<main style="margin-top: 15vh;"> <!-- Inline style to avoid fixed navbar covering" -->
+    <section class="section-container card dark-box photobg over">
         <div class="first-heading">
             <h1 class="section-title"><a class="offset" id="BIO"></a>Bio</h1>
         </div>
@@ -53,8 +53,8 @@
             focusing over the years on web oriented coding.<br>
             I'm actually expanding my skills on the blockchain world and web3 dApps.          
             </p>       
-    </div>
-    <div class="section-container">
+    </section>
+    <section class="section-container">
         <h1 class="section-title"><a class="offset" id="SKILLS"></a>Skills</h1>
         <div class="skills-container">
                 <div class="skills-box">
@@ -68,20 +68,21 @@
                 <div class="skills-box">
                     <div class="skills-chart" data-percent="15">15%</div>
                     <h2>Javascript</h2>
-                </div>   
-        </div>        
+                </div> 
+        </div>          
+    </section>        
             
     </div>
-    <div class="section-container card dark-box">
+    <section class="section-container card dark-box">
         <h1 class="section-title"><a class="offset" id="PORTFOLIO"></a> Portfolio</h1>
         <p>
             This section is work in progress for now, 
             but I will fill it with a lot of projects very soon ;)
 
         </p>
-    </div>
+    </section>
     
-    <div class="section-container" style="margin-bottom: 0";>
+    <section class="section-container" style="margin-bottom: 0">
         <h1 class="section-title"><a class="offset" id="ABOUTME"></a> About Me</h1>
         <p>
             I live in Verona (Italy),<br>
@@ -91,12 +92,12 @@
             (but above all...eating!).<br><br>
             I live <s>alone</s> with a lovely cat. 
         </p>
-    </div>
+    </section>
     <div class="about-me-photo">
         <img src="images/chris2.png" alt="Smiling Chris">
     </div>
 
-    <div class="dark-box">
+    <section class="dark-box">
         <div class="contact">
         <h1 class="section-title"><a class="offset" id="CONTACTME"></a>Contact Me</h1>
         <p><em>Well</em>,<br> any questions? <br>Fill the form.</p><br>
@@ -117,8 +118,8 @@
                 <button>Submit</button>
             </div>
         </form>
-    </div>
-    </div>
+        </div>
+    </section>
 </main>
 
 <footer class="dark-box">
@@ -134,6 +135,14 @@
     </div>
     <div class="copyright"><small> © 2022 - Cristopher Turazza </small></div>     
 </footer>
+<script type="text/javascript">
+function hideMenu(){
+    let menuOpen = document.getElementById("menu-mobile-toggle").checked;
+        if(menuOpen = true){
+        document.getElementById("menu-mobile-toggle").checked = false;
+            }
+    }
+    </script>
 <script type="text/javascript">
     $(function() {
     $('.skills-chart').easyPieChart({
