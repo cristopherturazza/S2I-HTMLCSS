@@ -1,4 +1,5 @@
-<!DOCTYPE html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
@@ -20,20 +21,21 @@
 <header>
     <div class="dark-box header">
         <div class="menu-bar">
+           
             <a href="/index.html"><img class="logo" src="images/clogo.png" alt="MyLogo"></a>
-        <div class="menu">
-            <div class="menu-link"><a href="#BIO" > Bio </a></div>
-            <div class="menu-link"><a href="#SKILLS"> Skills </a></div>
-            <div class="menu-link"><a href="#PORTFOLIO"> Portfolio </a></div>
-            <div class="menu-link"><a href="#ABOUTME"> About Me </a></div>
-            <div class="menu-link"><a href="#CONTACTME"> Contact Me </a></div>
+            <div class="menu">
+            <div class="menu-link"><a href="#" >Bio </a></div>
+            <div class="menu-link"><a href="#SKILLS">Skills </a></div>
+            <div class="menu-link"><a href="#PORTFOLIO">Portfolio </a></div>
+            <div class="menu-link"><a href="#ABOUTME">About Me </a></div>
+            <div class="menu-link"><a href="#CONTACTME">Contact Me </a></div>
         </div>
         <input id="menu-mobile-toggle" type="checkbox" />
     <label class='menu-mobile-button-container' for="menu-mobile-toggle">
     <div class='menu-mobile-button'></div>
   </label>
     <ul class="menu-mobile">
-      <li><a href="#BIO" onclick='hideMenu()'> Bio </a></li>
+      <li><a href="#" onclick='hideMenu()'> Bio </a></li>
       <li><a href="#SKILLS" onclick='hideMenu()'> Skills </a></li>
       <li><a href="#PORTFOLIO" onclick='hideMenu()'> Portfolio </a></li>
       <li><a href="#ABOUTME" onclick='hideMenu()'> About Me </a></li>
@@ -45,12 +47,12 @@
 <main style="margin-top: 15vh;"> <!-- Inline style to avoid fixed navbar covering" -->
     <section class="section-container card dark-box photobg over">
         <div class="first-heading">
-            <h1 class="section-title"><a class="offset" id="BIO"></a>Bio</h1>
+            <h1 id="section-first-title"><a class="offset" id="BIO"></a><strong>Cristopher</strong> Turazza</h1>
         </div>
-            <p class="over"><strong>Hi,</strong><br> my name is <em>Cristopher Turazza</em>,<br><br>
-            full stack developer on web sites, <strong>HTML5 & CSS3</strong> and <strong> Javascript </strong> coding.<br><br>
-            Born in 1986, I started coding when I was only 9,
-            focusing over the years on web oriented coding.<br>
+            <p class="over"><br><strong>Hi,</strong><br>welcome to my website.<br><br>
+            I'm a <strong>full stack developer</strong>, focused on <strong>HTML5 & CSS3</strong> and <strong> Javascript </strong> coding.<br><br>
+            Born in 1986, I started programming at just 9 years old with Basic, 
+            over the years I have specialized in static and dynamic websites.<br>
             I'm actually expanding my skills on the blockchain world and web3 dApps.          
             </p>       
     </section>
@@ -77,8 +79,8 @@
         <h1 class="section-title"><a class="offset" id="PORTFOLIO"></a> Portfolio</h1>
         <p>
             This section is work in progress for now, 
-            but I will fill it with a lot of projects very soon ;)
-
+            but I will fill it with a lot of projects very soon ;) <br>     
+            For now, you can take a look at my <a href="https://www.github.com/ChrisTurazza">Github</a>.   
         </p>
     </section>
     
@@ -88,7 +90,7 @@
             I live in Verona (Italy),<br>
              DJ from some years for small clubs in the area,
             I love listening to beautiful music of all kinds,
-            reading books, drinking good wine and sometimes cooking 
+            reading books, drinking good wines and sometimes cooking 
             (but above all...eating!).<br><br>
             I live <s>alone</s> with a lovely cat. 
         </p>
@@ -101,10 +103,10 @@
         <div class="contact">
         <h1 class="section-title"><a class="offset" id="CONTACTME"></a>Contact Me</h1>
         <p><em>Well</em>,<br> any questions? <br>Fill the form.</p><br>
-        <form action="mailto:cristopherturazza@gmail.com" method="post" enctype=”text/plain”>
+        <form onsubmit="sendEmail (); reset (); return false">
             <div class="form-row">
                 <label for="full-name">Full Name</label>
-                <input id="full-name" name="full-name" type="text"/>
+                <input id="full-name" name="full-name" type="text" placeholder="Name and Surname"/>
             </div>   
             <div class="form-row">
                 <label for="email">E-Mail</label>
@@ -112,10 +114,10 @@
             </div>
             <div class="form-row">
                 <label for="request">Ask Me Anything</label>
-                <textarea id="request" name="request"></textarea>
+                <textarea id="request" name="request" placeholder="Write your request here"></textarea>
             </div>
             <div class="form-row">
-                <button>Submit</button>
+                <button type="submit">Submit</button>
             </div>
         </form>
         </div>
@@ -135,6 +137,26 @@
     </div>
     <div class="copyright"><small> © 2022 - Cristopher Turazza </small></div>     
 </footer>
+
+<!-- Script for sending emails with smtpJS -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+function sendEmail(){
+  Email.send({  
+    SecureToken : "13fbdead-f3e6-4420-a566-b3bd35ec2695",
+    To : 'cristopherturazza@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New contact from " + document.getElementById("full-name").value,
+    Body : "Name: " + document.getElementById("full-name").value + 
+    "<br> Email: " + document.getElementById("email").value + 
+    "<br><br> Message: <br>" + document.getElementById("request").value
+}).then(
+  message => alert("Message Sent Succesfully")
+);}
+</script>
+
+
+<!-- Script for closing mobile menu on click-->
 <script type="text/javascript">
 function hideMenu(){
     let menuOpen = document.getElementById("menu-mobile-toggle").checked;
@@ -143,6 +165,7 @@ function hideMenu(){
             }
     }
     </script>
+<!-- Script for Skills Chart -->    
 <script type="text/javascript">
     $(function() {
     $('.skills-chart').easyPieChart({
