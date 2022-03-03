@@ -41,11 +41,10 @@ strong {
 h1, h2 {
 font-weight: bold;
 overflow: hidden;
-
 }
 
-span {
-    display: block;
+main {
+    margin-top: 20vh;
 }
 
 .header { /** top fixed navbar **/
@@ -57,8 +56,11 @@ span {
     top: 0;
     width:100%;
     min-height: 5rem;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.445);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.445);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.445);
+    z-index: 2;
 }
+
 
 /** offset for menu anchors **/
 .offset {
@@ -107,16 +109,19 @@ img.logo:hover {
 
 .card {
     border-radius: 1rem;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.445);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.445);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.445);
 }
 
 .section-container {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
     padding: 1.7rem;
     margin: 2rem 1rem;
+    z-index: 1;
 }
 
 .section-container a {
@@ -136,21 +141,36 @@ img.logo:hover {
     font-weight: bolder;
     padding-bottom: 0.35rem;
     letter-spacing: -0.3rem;
+    transition: letter-spacing 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     
 }
 
 #section-first-title {
     font-family: 'Inter', sans-serif;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: lighter;
     padding-bottom: 0.35rem;
     letter-spacing: -0.3rem;
     z-index: 1;
+    transition: letter-spacing 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+
+.section-container:hover .section-title {
+    letter-spacing: 0rem;
+}
+.section-container:hover #section-first-title {
+    letter-spacing: 0rem;
+}
+.contact:hover .section-title {
+    letter-spacing: 0rem;
+}
+
 
 .contact {
     box-sizing: border-box;
     padding: 2.3rem;
+    transition: letter-spacing 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .form-row {
@@ -243,12 +263,9 @@ footer {
 }
 
 /** === putting bg under Bio text === **/
-.over {
-    position: relative;
-}
 
 .photobg {
-    z-index: -1;
+    z-index: 0;
 }
 
 .photobg::before {
@@ -261,6 +278,7 @@ footer {
     bottom: 0;
     left: 30%;
     opacity: 30%;
+    z-index: -1;
 }
 /** === putting bg under Bio text === END **/
 
@@ -394,10 +412,9 @@ footer {
     color: #dbe9e9;
     background-color: #1f2b3f;
     background: linear-gradient(to right,#1f2b3f,#2a3a55);
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.856);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
   }
-
-
 
 /** Desktop media query **/
 
