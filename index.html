@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
+    <script src="pagefade.js"></script>
+    <script src="jQuery.scrollSpeed.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +16,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/clogo-icon.ico">
+    
     <title>Cristopher Turazza</title>
 </head>
-
 <body>
 <header>
     <div class="dark-box header">
@@ -155,6 +157,18 @@ function sendEmail(){
 );}
 </script>
 
+<!-- Script for page load fade in-->
+<script>
+    $(document).ready(function() { $("html, body").pagefade(400, 400); });
+</script>
+
+
+<script>
+    $(function() {  
+    // $fn.scrollSpeed(step, speed, easing);
+    jQuery.scrollSpeed(300, 1800);
+    });
+</script>
 
 <!-- Script for closing mobile menu on click-->
 <script type="text/javascript">
