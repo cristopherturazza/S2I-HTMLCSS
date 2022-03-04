@@ -5,6 +5,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
     <script src="pagefade.js"></script>
     <script src="jQuery.scrollSpeed.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,14 +53,13 @@
     <section class="section-container card dark-box photobg">
         <div class="first-heading">
             <h1 id="section-first-title"><a class="offset" id="BIO"></a>
-                    <strong>Cristopher</strong> Turazza
+                    <strong>Cristopher</strong><br class="two-lines"> Turazza
             </h1>
-        </div>
-        <div class="title-divider"></div>    
-            <p class="over"><br><strong>Hi,</strong><br>welcome to my website.<br><br>
+        </div>   
+            <p><br><strong>Hi,</strong><br>welcome to my website.<br><br>
             I'm a <strong>full stack developer</strong>, focused on <strong>HTML5 & CSS3</strong> and <strong> Javascript </strong> coding.<br><br>
             Born in 1986, I started programming at just 9 years old with Basic, 
-            over the years I have specialized in static and dynamic websites.<br>
+            over the years I have specialized in dynamic websites.<br>
             I'm actually expanding my skills on the blockchain world and web3 dApps.          
             </p>       
     </section>
@@ -113,18 +113,25 @@
         <form onsubmit="sendEmail (); reset (); return false">
             <div class="form-row">
                 <label for="full-name">Full Name</label>
-                <input id="full-name" name="full-name" type="text" placeholder="Name and Surname"/>
+                <input id="full-name" name="full-name" type="text" required placeholder="Name and Surname"/>
             </div>   
             <div class="form-row">
                 <label for="email">E-Mail</label>
-                <input id="email" name="email" type="email" placeholder="you@example.com">   
+                <input id="email" name="email" type="email" required placeholder="you@example.com">   
             </div>
             <div class="form-row">
                 <label for="request">Ask Me Anything</label>
-                <textarea id="request" name="request" placeholder="Write your request here"></textarea>
+                <textarea id="request" name="request" required placeholder="Write your request here"></textarea>
             </div>
             <div class="form-row">
-                <button type="submit">Submit</button>
+                <button class="cd-popup-trigger" type="submit">Submit</button>
+                <div class="hover_bkgr_fricc">
+                    <span class="helper"></span>
+                    <div>
+                        <div class="popupCloseButton">&times;</div>
+                        <p>Message Sent Succesfully!</p>
+                    </div>
+                </div>
             </div>
         </form>
         </div>
@@ -157,9 +164,21 @@ function sendEmail(){
     Body : "Name: " + document.getElementById("full-name").value + 
     "<br> Email: " + document.getElementById("email").value + 
     "<br><br> Message: <br>" + document.getElementById("request").value
-}).then(
-  message => alert("Message Sent Succesfully")
-);}
+})
+.then(
+    Swal.fire({
+  title: 'Sent!',
+  text: 'Your message is on the way.',
+  icon: 'success',
+  confirmButtonText: 'Ok',
+  confirmButtonColor: "#6287c7",
+  color: "#1f2b3f",
+  background: "#dbe9e9"
+})
+
+    );
+}
+    
 </script>
 
 <!-- Script for page load fade in-->
@@ -167,6 +186,7 @@ function sendEmail(){
     $(document).ready(function() { $("html, body").pagefade(400, 400); });
 </script>
 
+<!-- Script for smooth scrolling -->
 
 <script>
     $(function() {  
@@ -183,8 +203,10 @@ function hideMenu(){
         document.getElementById("menu-mobile-toggle").checked = false;
             }
     }
-    </script>
-<!-- Script for Skills Chart -->    
+</script>
+
+<!-- Script for Skills Chart -->   
+
 <script type="text/javascript">
     $(function() {
     $('.skills-chart').easyPieChart({
