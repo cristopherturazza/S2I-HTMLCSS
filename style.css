@@ -495,7 +495,7 @@ footer {
 
 /* ========= Media Query for Desktop ========== */
 
-@media only screen and (min-width: 890px) {
+@media only screen and (min-width: 890px) and (max-width: 1300px) {
 
 .menu-bar, .section-container, .contact, .about-me-photo {
         width: 60vw;
@@ -579,4 +579,94 @@ footer {
   .menu-mobile {
       display:none;
   }
+
+}
+
+@media only screen and (min-width: 1301px) {
+
+    .menu-bar, .section-container, .contact, .about-me-photo {
+        width: 45vw;
+        margin: 0 auto;
+      }
+    
+.section-container {
+          margin-top: 2em;
+      }
+
+.section-container p {
+        max-width: 40vw;
+    }
+
+    
+.contact {
+        padding: 3rem 1.7rem;
+      }
+
+.form-row button {
+    width: 15vw;
+}
+
+.skills-container {
+    flex-direction: row;
+}
+
+.photobg::before {
+    left: 60%
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    padding-top: 2.5rem;
+}
+
+.menu-link {
+    font-size: 1rem;
+    padding: 0 1rem;
+    transition: 500ms ease-in-out;
+}
+
+.menu-link:hover {
+    transform: translateY(-4%);
+}
+
+.menu-link a {
+    color:#dbe9e9;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    transition: 500ms ease-in-out;
+    white-space: nowrap;
+}
+
+.menu-link a:hover {
+    color:#76eaee;
+}
+
+.social-buttons {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.two-lines {
+    display: none;
+}
+
+/** Mobile Menu Toggle**/
+  
+  .menu-mobile-button-container {
+    display: none;
+  }
+  
+  #menu-mobile-toggle {
+    display: none;
+  }
+
+  .menu-mobile {
+      display:none;
+  }
+
+}
+
 }
