@@ -461,87 +461,31 @@ footer {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
   }
 
-
-/* Popup Email Sent Box */
-
-.hover_bkgr_fricc{
-    background:rgba(0,0,0,.4);
-    cursor:pointer;
-    display:none;
-    height:100%;
-    position:fixed;
-    text-align:center;
-    top:0;
-    width:100%;
-    z-index:10000;
-}
-.hover_bkgr_fricc .helper{
-    display:inline-block;
-    height:100%;
-    vertical-align:middle;
-}
-.hover_bkgr_fricc > div {
-    background-color: #fff;
-    box-shadow: 10px 10px 60px #555;
-    display: inline-block;
-    height: auto;
-    max-width: 551px;
-    min-height: 100px;
-    vertical-align: middle;
-    width: 60%;
-    position: relative;
-    border-radius: 8px;
-    padding: 15px 5%;
-}
-.popupCloseButton {
-    background-color: #fff;
-    border: 3px solid #999;
-    border-radius: 50px;
-    cursor: pointer;
-    display: inline-block;
-    font-family: arial;
-    font-weight: bold;
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 25px;
-    line-height: 30px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-}
-.popupCloseButton:hover {
-    background-color: #ccc;
-}
-.trigger_popup_fricc {
-    cursor: pointer;
-    font-size: 20px;
-    margin: 20px;
-    display: inline-block;
-    font-weight: bold;
-}
-
 /* ======== Media Query for Tablet or landscape ======== */
 
 @media only screen and (min-width: 550px) and (max-width: 889px) {
 
     .menu-bar, .section-container, .contact, .about-me-photo {
-        width: 80vw;
-        margin: 0 auto;
-      }
-      .section-container {
-        margin-top: 2em;
-    }
+            width: 80vw;
+            margin: 0 auto;
+        }
+    .section-container {
+            margin-top: 2em;
+        }
     .section-container p {
-        max-width: 50vw;
-    }
+            max-width: 50vw;
+        }
     .skills-container {
-        flex-direction: row;
-    }
-    
+            flex-direction: row;
+        }
+        
     .photobg::before {
-        left: 45%
-    }
+            left: 45%
+        }
+    .social-buttons {
+            width: 50%;
+            margin: 0 auto;
+        }    
 
 }
 
