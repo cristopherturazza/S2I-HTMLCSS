@@ -25,7 +25,7 @@
         <div class="menu-bar">
             <a href="index.html"><img class="logo" src="images/clogo.png" alt="MyLogo"></a>
             <div class="menu">
-            <div class="menu-link"><a href="#" >Bio </a></div>
+            <div class="menu-link"><a href="#BIO" >Bio </a></div>
             <div class="menu-link"><a href="#SKILLS">Skills </a></div>
             <div class="menu-link"><a href="#PORTFOLIO">Portfolio </a></div>
             <div class="menu-link"><a href="#ABOUTME">About Me </a></div>
@@ -36,7 +36,7 @@
     <div class='menu-mobile-button'></div>
   </label>
     <ul class="menu-mobile">
-      <li><a href="#" onclick='hideMenu()'> Bio </a></li>
+      <li><a href="#BIO" onclick='hideMenu()'> Bio </a></li>
       <li><a href="#SKILLS" onclick='hideMenu()'> Skills </a></li>
       <li><a href="#PORTFOLIO" onclick='hideMenu()'> Portfolio </a></li>
       <li><a href="#ABOUTME" onclick='hideMenu()'> About Me </a></li>
@@ -149,6 +149,20 @@
     </div>
     <div class="copyright"><small> © 2022 - Cristopher Turazza </small></div>     
 </footer>
+
+<script>
+
+  $(".menu-link a, .menu-mobile li a").on("click", function (e) {
+  // 1
+  e.preventDefault();
+  // 2
+  const href = $(this).attr("href");
+  // 3
+  $("html, body").animate({ scrollTop: $(href).offset().top }, 800);
+});
+
+</script>
+
 
 <!-- Script for sending emails with smtpJS -->
 <script src="https://smtpjs.com/v3/smtp.js"></script>

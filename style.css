@@ -20,12 +20,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/**
-html {
-    scroll-behavior: smooth;
-  }
-**/
-
 
 body {
     font-size: 1em;
@@ -70,6 +64,11 @@ main {
     position: relative;
     top: -100px;
     visibility: hidden;
+}
+
+.offset:first-of-type { 
+    top: -200px;
+    
 }
 
 .menu-bar {
