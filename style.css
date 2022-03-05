@@ -23,7 +23,7 @@ time, mark, audio, video {
 }
 
 body {
-    font-size: 1em;
+    font-size: 18px;
     width: 100%;
     background-color:#dbe9e9 ;
     color: #1f2b3f;
@@ -465,13 +465,16 @@ footer {
 /* ======== Media Query for Tablet or landscape ======== */
 
 @media only screen and (min-width: 550px) and (max-width: 889px) {
+    body {
+        font-size: 18px;
+    }
 
     .menu-bar, .section-container, .contact, .about-me-photo {
             width: 80vw;
             margin: 0 auto;
         }
     .section-container {
-            margin-top: 2em;
+            margin-top: 2rem;
         }
     .section-container p {
             max-width: 50vw;
@@ -497,13 +500,17 @@ footer {
 
 @media only screen and (min-width: 890px) and (max-width: 1300px) {
 
+body {
+        font-size: 20px;
+    }
+
 .menu-bar, .section-container, .contact, .about-me-photo {
         width: 60vw;
         margin: 0 auto;
       }
     
 .section-container {
-          margin-top: 2em;
+          margin-top: 2rem;
       }
 
 .section-container p {
@@ -535,13 +542,13 @@ footer {
 }
 
 .menu-link {
-    font-size: 1rem;
+    font-size: 18px;
     padding: 0 1rem;
     transition: 500ms ease-in-out;
 }
 
 .menu-link:hover {
-    transform: translateY(-4%);
+    transform: translateY(4%);
 }
 
 .menu-link a {
@@ -584,22 +591,26 @@ footer {
 
 @media only screen and (min-width: 1301px) {
 
-    .menu-bar, .section-container, .contact, .about-me-photo {
-        width: 45vw;
-        margin: 0 auto;
+body {
+    font-size: 20px;
+    }
+
+.menu-bar, .section-container, .contact, .about-me-photo {
+    width: 45vw;
+    margin: 0 auto;
       }
     
 .section-container {
-          margin-top: 2em;
+    margin-top: 2rem;
       }
 
 .section-container p {
-        max-width: 40vw;
+    max-width: 40vw;
     }
 
     
 .contact {
-        padding: 3rem 1.7rem;
+    padding: 3rem 1.7rem;
       }
 
 .form-row button {
@@ -622,13 +633,13 @@ footer {
 }
 
 .menu-link {
-    font-size: 1rem;
+    font-size: 18px;
     padding: 0 1rem;
     transition: 500ms ease-in-out;
 }
 
 .menu-link:hover {
-    transform: translateY(-4%);
+    transform: translateY(4%);
 }
 
 .menu-link a {
