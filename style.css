@@ -1,5 +1,6 @@
 
-/** CSS Reset **/
+/* CSS Reset */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -43,7 +44,9 @@ main {
     margin-top: 20vh;
 }
 
-.header { /** top fixed navbar **/
+/* top fixed navbar */
+
+.header { 
     position: fixed;
     display: flex;
     justify-content: center;
@@ -58,7 +61,8 @@ main {
 }
 
 
-/** offset for menu anchors **/
+/* offset for menu anchors */
+
 .offset {
     display: block;
     position: relative;
@@ -66,10 +70,18 @@ main {
     visibility: hidden;
 }
 
-.offset:first-of-type { 
+/* offset for first link, 
+going to the top because id=# doesn't works 
+in the scrolling JS script */
+
+.offset-first { 
+    display: block;
+    position: relative;
     top: -200px;
-    
+    visibility: hidden;
 }
+
+/* nav bar */
 
 .menu-bar {
     display: flex;
@@ -85,9 +97,13 @@ main {
     height: 4rem;
 }
 
+/* toggle desktop navbar */
+
 .menu {
     display:none;
 }
+
+/* logo animation */
 
 .logo {
     transition: 500ms ease-in-out;
@@ -97,10 +113,7 @@ img.logo:hover {
     transform: rotate(45deg);
 }
 
-.first-heading {
-    display: flex;
-    justify-content: space-between;
-}
+/* Dark Background Sections */
 
 .dark-box {
     background-color: #1f2b3f;
@@ -108,11 +121,15 @@ img.logo:hover {
     color: #dbe9e9;
 }
 
+/* Boxes with shadow */
+
 .card {
     border-radius: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.445);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.445);
 }
+
+/* Styling Containers */
 
 .section-container {
     display: flex;
@@ -136,43 +153,47 @@ img.logo:hover {
     color:#76eaee;
 }
 
+/* Title Styling */
+
 .section-title {
-    font-family: 'Inter', sans-serif;
     font-size: 3.8rem;
     font-weight: bolder;
     padding-bottom: 1rem;
     letter-spacing: -0.3rem;
     transition: letter-spacing 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    
 }
 
-#section-first-title {
-    font-family: 'Inter', sans-serif;
+/* Some differences for the first title*/
+
+.section-first-title {
     font-size: 3.2rem;
     font-weight: lighter;
-    padding-bottom: 1rem;
-    letter-spacing: -0.3rem;
     z-index: 1;
+    letter-spacing: -0.3rem;
     transition: letter-spacing 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* Hover title effect on sections */
 
 .section-container:hover .section-title {
     letter-spacing: -0.2rem;
 }
-.section-container:hover #section-first-title {
+.section-container:hover .section-first-title {
     letter-spacing: -0.2rem;
 }
 .contact:hover .section-title {
     letter-spacing: -0.2rem;
 }
 
+/* contact section with different styling */
 
 .contact {
     box-sizing: border-box;
     padding: 2.3rem;
     transition: letter-spacing 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+/* form styling */
 
 .form-row {
     margin-bottom: 1rem;
@@ -231,7 +252,20 @@ img.logo:hover {
     color: #1f2b3f;
     box-shadow: 2px 2px 10px inset rgba(0, 0, 0, 0.253);
 }
-    
+
+/* About Me Photo Styling */
+
+.about-me-photo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-me-photo img {
+    max-width: 20rem;
+    margin-right: 2rem;
+}
+
+/* Footer styling */
 
 footer {
     display: flex;
@@ -290,7 +324,8 @@ footer {
     opacity: 30%;
     z-index: -1;
 }
-/** === putting bg under Bio text === END **/
+
+/* Skills Style */
 
 .skills-container {
     display: flex;
@@ -427,7 +462,8 @@ footer {
   }
 
 
-/* Popup box BEGIN */
+/* Popup Email Sent Box */
+
 .hover_bkgr_fricc{
     background:rgba(0,0,0,.4);
     cursor:pointer;
@@ -484,7 +520,8 @@ footer {
     display: inline-block;
     font-weight: bold;
 }
-/* Popup box BEGIN */
+
+/* ======== Media Query for Tablet or landscape ======== */
 
 @media only screen and (min-width: 550px) and (max-width: 889px) {
 
@@ -508,9 +545,7 @@ footer {
 
 }
 
-
-
-/** ========= Desktop media query ========== **/
+/* ========= Media Query for Desktop ========== */
 
 @media only screen and (min-width: 890px) {
 

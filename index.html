@@ -20,8 +20,8 @@
     <title>Cristopher Turazza</title>
 </head>
 <body>
-<header>
-    <div class="dark-box header">
+<header> <!-- nav bar -->
+    <nav class="dark-box header">
         <div class="menu-bar">
             <a href="index.html"><img class="logo" src="images/clogo.png" alt="MyLogo"></a>
             <div class="menu">
@@ -32,35 +32,34 @@
             <div class="menu-link"><a href="#CONTACTME">Contact Me </a></div>
         </div>
         <input id="menu-mobile-toggle" type="checkbox" />
-    <label class='menu-mobile-button-container' for="menu-mobile-toggle">
-    <div class='menu-mobile-button'></div>
-  </label>
-    <ul class="menu-mobile">
-      <li><a href="#BIO" onclick='hideMenu()'> Bio </a></li>
-      <li><a href="#SKILLS" onclick='hideMenu()'> Skills </a></li>
-      <li><a href="#PORTFOLIO" onclick='hideMenu()'> Portfolio </a></li>
-      <li><a href="#ABOUTME" onclick='hideMenu()'> About Me </a></li>
-      <li><a href="#CONTACTME" onclick='hideMenu()'> Contact Me </a></li>
-    </ul>    
+        <label class='menu-mobile-button-container' for="menu-mobile-toggle">
+        <div class='menu-mobile-button'></div>
+        </label>
+            <ul class="menu-mobile">
+                <li><a href="#BIO" onclick='hideMenu()'> Bio </a></li>
+                <li><a href="#SKILLS" onclick='hideMenu()'> Skills </a></li>
+                <li><a href="#PORTFOLIO" onclick='hideMenu()'> Portfolio </a></li>
+                <li><a href="#ABOUTME" onclick='hideMenu()'> About Me </a></li>
+                <li><a href="#CONTACTME" onclick='hideMenu()'> Contact Me </a></li>
+            </ul>    
         </div>
-    </div>
+    </nav>
 </header>
-<!--Inline style to avoid fixed navbar covering-->
-
 <main>
+    <!-- Bio Section -->
     <section class="section-container card dark-box photobg">
-        <div class="first-heading">
-            <h1 id="section-first-title"><a class="offset" id="BIO"></a>
-                    <strong>Cristopher</strong><br class="two-lines"> Turazza
-            </h1>
-        </div>   
-            <p><br><strong>Hi,</strong><br>welcome to my website.<br><br>
+            <h1 class="section-first-title"><a class="offset-first" id="BIO"></a>
+                <strong>Cristopher</strong><br class="two-lines"> Turazza</h1>
+            <p><br><strong>Hi,
+            </strong><br>welcome to my website.<br><br>
             I'm a <strong>full stack developer</strong>, focused on <strong>HTML5 & CSS3</strong> and <strong> Javascript </strong> coding.<br><br>
             Born in 1986, I started programming at just 9 years old with Basic, 
             over the years I have specialized in dynamic websites.<br>
             I'm actually expanding my skills on the blockchain world and web3 dApps.          
             </p>       
     </section>
+
+    <!--- Skills Section -->
     <section class="section-container">
         <h1 class="section-title"><a class="offset" id="SKILLS"></a>Skills</h1>
         <div class="skills-container">
@@ -77,9 +76,9 @@
                     <h2>Javascript</h2>
                 </div> 
         </div>          
-    </section>        
-            
-    </div>
+    </section>
+
+    <!-- Portfolio Section -->
     <section class="section-container card dark-box">
         <h1 class="section-title"><a class="offset" id="PORTFOLIO"></a> Portfolio</h1>
         <p>
@@ -88,8 +87,9 @@
             For now, you can take a look at my <a href="https://www.github.com/ChrisTurazza">Github</a>.   
         </p>
     </section>
-    
-    <section class="section-container" style="margin-bottom: 0">
+
+    <!-- About Me Section  -->
+    <section class="section-container" style="margin-bottom: 0; padding-bottom: 0;">
         <h1 class="section-title"><a class="offset" id="ABOUTME"></a> About Me</h1>
         <p>
             I live in Verona (Italy),<br>
@@ -99,11 +99,12 @@
             (but above all...eating!).<br><br>
             I live <s>alone</s> with a lovely cat. 
         </p>
+        <div class="about-me-photo">
+            <img src="images/chris2.png" alt="Smiling Chris">
+        </div>    
     </section>
-    <div class="about-me-photo">
-        <img src="images/chris2.png" alt="Smiling Chris">
-    </div>
-
+    
+    <!-- Contact Form Section -->
     <section class="dark-box">
         <div class="contact">
         <h1 class="section-title"><a class="offset" id="CONTACTME"></a>Contact Me</h1>
@@ -122,20 +123,14 @@
                 <textarea id="request" name="request" required placeholder="Write your request here"></textarea>
             </div>
             <div class="form-row">
-                <button class="cd-popup-trigger" type="submit">Submit</button>
-                <div class="hover_bkgr_fricc">
-                    <span class="helper"></span>
-                    <div>
-                        <div class="popupCloseButton">&times;</div>
-                        <p>Message Sent Succesfully!</p>
-                    </div>
-                </div>
+                <button type="submit">Submit</button>
             </div>
         </form>
         </div>
     </section>
 </main>
 
+<!-- Footer Section -->
 <footer class="dark-box">
     <div class="social-buttons">
        <a href="https://www.instagram.com/christurazza/"><img src="images/instagram-24.png" 
@@ -150,8 +145,8 @@
     <div class="copyright"><small> © 2022 - Cristopher Turazza </small></div>     
 </footer>
 
+<!-- Script for Smooth Scrolling -->
 <script>
-
   $(".menu-link a, .menu-mobile li a").on("click", function (e) {
   // 1
   e.preventDefault();
@@ -162,7 +157,6 @@
 });
 
 </script>
-
 
 <!-- Script for sending emails with smtpJS -->
 <script src="https://smtpjs.com/v3/smtp.js"></script>
@@ -190,7 +184,7 @@ function sendEmail(){
 }
 </script>
 
-<!-- Script for page load fade in-->
+<!-- Script for page faded loading-->
 <script>
     $(document).ready(function() { $("html, body").pagefade(400, 400); });
 </script>
@@ -219,6 +213,5 @@ function hideMenu(){
     });
   });
   </script>
-
 </body>
 </html>
