@@ -189,7 +189,7 @@ img.logo:hover {
 
 .contact {
     box-sizing: border-box;
-    padding: 2.3rem;
+    padding: 2.5rem;
     transition: letter-spacing 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -263,6 +263,7 @@ img.logo:hover {
 .about-me-photo img {
     max-width: 20rem;
     margin-right: 2rem;
+    margin-left: 2rem;
 }
 
 /* Footer styling */
@@ -485,7 +486,10 @@ footer {
     .social-buttons {
             width: 50%;
             margin: 0 auto;
-        }    
+        }
+    .contact {
+        padding: 3rem 1.7rem;
+    }    
 
 }
 
@@ -508,7 +512,7 @@ footer {
 
     
 .contact {
-        padding: 1.7rem;
+        padding: 3rem 1.7rem;
       }
 
 .form-row button {
